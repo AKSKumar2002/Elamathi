@@ -434,3 +434,150 @@ footer {
 footer p {
   text-align: center;
 }
+
+/* === DARK MODE TOGGLE BUTTON === */
+#darkModeToggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(200, 200, 200, 0.6);
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: background 0.3s ease;
+}
+
+#darkModeToggle:hover {
+  background: rgba(120, 120, 120, 0.8);
+}
+
+/* === DARK MODE STYLES === */
+body.dark {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+body.dark a {
+  color: #ddd;
+}
+
+body.dark nav,
+body.dark .menu-links,
+body.dark .details-container,
+body.dark .color-container,
+body.dark .contact-info-upper-container,
+body.dark footer {
+  background-color: rgba(30, 30, 30, 0.85);
+  border-color: rgba(100, 100, 100, 0.6);
+}
+
+body.dark .btn {
+  border-color: #aaa;
+}
+
+body.dark .btn-color-1,
+body.dark .btn-color-2:hover {
+  background: #444;
+  color: #fff;
+}
+
+body.dark .btn-color-1:hover {
+  background: #000;
+}
+
+body.dark .arrow {
+  filter: invert(1);
+}
+
+/* === DARK MODE TOGGLE BUTTON === */
+#darkModeToggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  background: rgba(240, 240, 240, 0.6);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  z-index: 1000;
+  transition: background 0.3s ease;
+}
+#darkModeToggle:hover {
+  background: rgba(120, 120, 120, 0.8);
+}
+
+/* === DARK MODE CORE === */
+body.dark {
+  background-color: #121212;
+  color: #f2f2f2;
+}
+
+/* Global text override */
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark h4,
+body.dark h5,
+body.dark h6,
+body.dark p,
+body.dark .title,
+body.dark .section__text__p1,
+body.dark .section__text__p2,
+body.dark .experience-sub-title {
+  color: #f2f2f2;
+}
+
+/* Link fix */
+body.dark a {
+  color: #f0f0f0;
+}
+body.dark a:hover {
+  color: #cccccc;
+}
+
+/* Background elements */
+body.dark nav,
+body.dark .menu-links,
+body.dark .details-container,
+body.dark .color-container,
+body.dark .contact-info-upper-container,
+body.dark footer {
+  background-color: rgba(30, 30, 30, 0.9);
+  border-color: rgba(100, 100, 100, 0.5);
+}
+
+/* Buttons */
+body.dark .btn {
+  border-color: #aaa;
+  background-color: transparent;
+  color: #f2f2f2;
+}
+body.dark .btn-color-1,
+body.dark .btn-color-2:hover {
+  background: #444;
+  color: #fff;
+}
+body.dark .btn-color-1:hover {
+  background: #000;
+}
+
+/* Icons and arrows */
+body.dark .arrow,
+body.dark .icon {
+  filter: brightness(0) invert(1);
+}
+
+/* Fix menu text visibility */
+body.dark .menu-links a {
+  color: #f0f0f0;
+}
