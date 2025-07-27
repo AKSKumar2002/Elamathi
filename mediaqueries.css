@@ -39,7 +39,7 @@
   }
   .section__pic-container {
     width: 275px;
-    height: 275px;
+    height: auto;
     margin: 0 auto 2rem;
   }
   .about-containers {
@@ -87,9 +87,17 @@
     text-align: center;
   }
   .section__pic-container {
-    width: auto;
-    height: 46vw;
+    width: 100%;
+    max-width: 320px;
+    height: auto;
     justify-content: center;
+    padding: 1rem;
+  }
+  .section__pic-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 2rem;
+    object-fit: cover;
   }
   .section__text__p2 {
     font-size: 1.25rem;
