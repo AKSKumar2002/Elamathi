@@ -288,10 +288,14 @@ section {
 }
 
 .about-pic {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
   border-radius: 2rem;
-  max-height: 300px; /* Added to make it shorter */
   object-fit: cover;
 }
+
 
 /* Shared image container styles */
 .section__pic-container {
