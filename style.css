@@ -5,6 +5,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -25,15 +26,13 @@ p {
 
 /* TRANSITION */
 
-a,
-.btn {
+a, .btn {
   transition: all 300ms ease;
 }
 
 /* DESKTOP NAV */
 
-nav,
-.nav-links {
+nav, .nav-links {
   display: flex;
 }
 
@@ -94,7 +93,7 @@ a:hover {
   width: 100%;
   height: 2px;
   background-color: black;
-  transition: all 0.3 ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .menu-links {
@@ -105,7 +104,7 @@ a:hover {
   width: fit-content;
   max-height: 0;
   overflow: hidden;
-  transition: all 0.3 ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .menu-links a {
@@ -115,7 +114,6 @@ a:hover {
   font-size: 1.5rem;
   color: black;
   text-decoration: none;
-  transition: all 0.3 ease-in-out;
 }
 
 .menu-links li {
@@ -138,30 +136,22 @@ a:hover {
   transform: rotate(-45deg) translate(10px, -5px);
 }
 
-.hamburger-icon span:first-child {
-  transform: none;
-}
-
-.hamburger-icon span:first-child {
-  opacity: 1;
-}
-
-.hamburger-icon span:first-child {
-  transform: none;
-}
-
 /* SECTIONS */
 
 section {
   padding-top: 4vh;
-  height: 96vh;
   margin: 0 10rem;
-  box-sizing: border-box;
   min-height: fit-content;
+  box-sizing: border-box;
 }
 
 .section-container {
   display: flex;
+  gap: 4rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  height: auto;
 }
 
 /* PROFILE SECTION */
@@ -171,13 +161,23 @@ section {
   justify-content: center;
   gap: 5rem;
   height: 80vh;
+  flex-wrap: wrap;
 }
 
 .section__pic-container {
   display: flex;
-  height: 320px; /* Reduced from 400px */
+  justify-content: center;
+  align-items: center;
+  height: 320px;
   width: 320px;
   margin: auto 0;
+}
+
+.section__pic-container img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .section__text {
@@ -227,10 +227,11 @@ section {
 
 .btn {
   font-weight: 600;
-  transition: all 300ms ease;
   padding: 1rem;
   width: 8rem;
   border-radius: 2rem;
+  border: 0.1rem solid rgb(53, 53, 53);
+  transition: all 300ms ease;
 }
 
 .btn-color-1,
@@ -261,10 +262,6 @@ section {
   border: rgb(255, 255, 255) 0.1rem solid;
 }
 
-.btn-container {
-  gap: 1rem;
-}
-
 /* ABOUT SECTION */
 
 #about {
@@ -272,32 +269,26 @@ section {
 }
 
 .about-containers {
+  display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
   margin-bottom: 2rem;
   margin-top: 2rem;
 }
 
 .about-details-container {
-  justify-content: center;
-  flex-direction: column;
-}
-
-.about-containers,
-.about-details-container {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
 }
 
 .about-pic {
-  border-radius: 2rem;
-  max-height: 300px; /* Added to make it shorter */
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-}
-
-/* Shared image container styles */
-.section__pic-container {
-  height: 320px;
-  width: 320px;
-  margin: auto 0;
+  border-radius: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .arrow {
@@ -306,19 +297,15 @@ section {
   bottom: 2.5rem;
 }
 
+/* DETAILS CONTAINER */
+
 .details-container {
   padding: 1.5rem;
   flex: 1;
   background: white;
   border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
+  border: 0.1rem solid rgb(163, 163, 163);
   text-align: center;
-}
-
-.section-container {
-  gap: 4rem;
-  height: 80%;
 }
 
 /* EXPERIENCE SECTION */
@@ -342,18 +329,17 @@ section {
 
 .article-container {
   display: flex;
-  text-align: initial;
   flex-wrap: wrap;
-  flex-direction: row;
   gap: 2.5rem;
   justify-content: space-around;
+  text-align: left;
 }
 
 article {
   display: flex;
-  width: 10rem;
-  justify-content: space-around;
+  align-items: center;
   gap: 0.5rem;
+  width: 10rem;
 }
 
 article .icon {
@@ -367,14 +353,17 @@ article .icon {
 }
 
 .color-container {
-  border-color: rgb(163, 163, 163);
+  border: 0.1rem solid rgb(163, 163, 163);
   background: rgb(250, 250, 250);
+  border-radius: 2rem;
+  padding: 1rem;
+  text-align: center;
 }
 
 .project-img {
   border-radius: 2rem;
   width: 90%;
-  height: 90%;
+  height: auto;
 }
 
 .project-title {
@@ -387,7 +376,7 @@ article .icon {
   border-color: rgb(163, 163, 163);
 }
 
-/* CONTACT */
+/* CONTACT SECTION */
 
 #contact {
   display: flex;
@@ -399,10 +388,10 @@ article .icon {
 .contact-info-upper-container {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
-  background: (250, 250, 250);
+  border: 0.1rem solid rgb(163, 163, 163);
+  background: rgb(250, 250, 250);
   margin: 2rem auto;
   padding: 0.5rem;
 }
@@ -461,7 +450,7 @@ footer p {
   background: rgba(120, 120, 120, 0.8);
 }
 
-/* DARK MODE */
+/* DARK MODE THEME */
 
 body.dark {
   background-color: #121212;
@@ -485,6 +474,7 @@ body.dark .experience-sub-title {
 body.dark a {
   color: #f0f0f0;
 }
+
 body.dark a:hover {
   color: #cccccc;
 }
@@ -504,11 +494,13 @@ body.dark .btn {
   background-color: transparent;
   color: #f2f2f2;
 }
+
 body.dark .btn-color-1,
 body.dark .btn-color-2:hover {
   background: #444;
   color: #fff;
 }
+
 body.dark .btn-color-1:hover {
   background: #000;
 }
@@ -532,81 +524,6 @@ body.dark .menu-links a {
 }
 
 @keyframes blink {
-  0% { opacity: 1; }
-  49% { opacity: 1; }
-  50% { opacity: 0; }
-  100% { opacity: 0; }
-}
-
-/* MEDIA QUERIES */
-
-@media screen and (max-width: 768px) {
-  .section-container {
-    flex-direction: column;
-    align-items: center;
-    margin: 0 2rem;
-  }
-
-  #profile {
-    flex-direction: column;
-    gap: 2rem;
-    height: auto;
-    padding-bottom: 2rem;
-  }
-
-  .section__pic-container {
-    width: 100%;
-    max-width: 280px;
-    height: auto;
-    justify-content: center;
-  }
-
-  .section__pic-container img,
-  .about-pic {
-    width: 100%;
-    height: auto;
-    border-radius: 2rem;
-    object-fit: cover;
-  }
-
-  .section__text {
-    text-align: center;
-  }
-
-  .about-containers {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .arrow {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  nav {
-    flex-direction: column;
-    height: auto;
-    padding: 1rem 0;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    gap: 1rem;
-    font-size: 1.2rem;
-  }
-
-  .section__text__p2 {
-    font-size: 1.4rem;
-  }
-
-  .title {
-    font-size: 2.2rem;
-  }
-
-  .btn {
-    padding: 0.75rem;
-    width: 100%;
-    max-width: 220px;
-  }
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
 }
