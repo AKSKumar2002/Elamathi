@@ -376,6 +376,24 @@
       <p>Copyright &#169; 2025 Elamathi P | All Rights Reserved.</p>
     </footer>
     <button id="darkModeToggle" title="Toggle Dark Mode">🌓</button>
+    <!-- Snowflake Container -->
+<div id="snowflake-container"></div>
+<script>
+  const container = document.getElementById("snowflake-container");
+  const snowflakeCount = 50;
+
+  for (let i = 0; i < snowflakeCount; i++) {
+    const snowflake = document.createElement("div");
+    snowflake.classList.add("snowflake");
+    snowflake.innerText = "❄";
+    snowflake.style.left = Math.random() * 100 + "vw";
+    snowflake.style.animationDuration = 5 + Math.random() * 5 + "s";
+    snowflake.style.fontSize = 10 + Math.random() * 20 + "px";
+    snowflake.style.opacity = Math.random() * 0.8 + 0.2;
+    container.appendChild(snowflake);
+  }
+</script>
+
     <script src="script.js"></script>
 
   </body>
