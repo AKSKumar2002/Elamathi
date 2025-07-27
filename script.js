@@ -30,3 +30,34 @@ toggleBtn.addEventListener("click", () => {
   const darkEnabled = body.classList.contains("dark");
   setDarkMode(!darkEnabled);
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const text = "Elamathi P";
+  const target = document.getElementById("typed-name");
+  let index = 0;
+  let typing = true;
+
+  function typeLoop() {
+    if (typing) {
+      if (index < text.length) {
+        target.textContent += text.charAt(index);
+        index++;
+        setTimeout(typeLoop, 150);
+      } else {
+        typing = false;
+        setTimeout(typeLoop, 3000); // wait 3s before deleting
+      }
+    } else {
+      if (index > 0) {
+        target.textContent = text.substring(0, index - 1);
+        index--;
+        setTimeout(typeLoop, 100);
+      } else {
+        typing = true;
+        setTimeout(typeLoop, 500); // short pause before retyping
+      }
+    }
+  }
+
+  typeLoop();
+});

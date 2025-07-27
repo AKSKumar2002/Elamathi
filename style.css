@@ -581,3 +581,18 @@ body.dark .icon {
 body.dark .menu-links a {
   color: #f0f0f0;
 }
+
+
+.cursor {
+  display: inline-block;
+  font-weight: bold;
+  color: #333;
+  animation: blink 0.7s steps(2, start) infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  49% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 0; }
+}
